@@ -21,7 +21,7 @@ There are a couple ways to solve this. I use the fact that the sum of n choose i
 ###[292. Nim Game ---- (Easy)](https://leetcode.com/problems/nim-game/) 21:00 Sunda, April 3 2016
 	
 
-	Simple answer... Why does this work? ( PLEASE DON'T TRY AND BRUTEFORCE!!!!!!!!!!)
+Simple answer... Why does this work? ( PLEASE DON'T TRY AND BRUTEFORCE!!!!!!!!!!)
 
 
-	First, write down the numbers 4, 5, 6, 7, 8, 9, 10 down. Observe at which positions you would lose at. 4 - no moves, 8 - no moves...etc. The name of the game is that IF the value is anything that is divisible by 4... no matter how many stones you remove (1,2,3), the opponent will always be able to count with 4 - <your move> in order to (inductively) make you reach the value 4. The converse is that YOU will be able to play the optimal move - always making the opponent's move be divisible by 4 and once again (inductively) forcing their move to be 4.
+First, write down the numbers 4, 5, 6, 7, 8, 9, 10 down. Observe at which positions you would lose at. 4 - no moves, 8 - no moves...etc. The name of the game is that IF the value is anything that is divisible by 4... no matter how many stones you remove (1,2,3), the opponent will always be able to count with 4 - <your move> in order to (inductively) make you reach the value 4. The converse is that YOU will be able to play the optimal move - always making the opponent's move be divisible by 4 and once again (inductively) forcing their move to be 4.
