@@ -18,7 +18,7 @@ There are a couple ways to solve this. I use the fact that the sum of n choose i
 
 
 
-####[292. Nim Game ---- (Easy)](https://leetcode.com/problems/nim-game/) 21:00 Sunday, April 3 2016
+###[292. Nim Game ---- (Easy)](https://leetcode.com/problems/nim-game/) 21:00 Sunda, April 3 2016
 	
 
 	Simple answer... Why does this work? ( PLEASE DON'T TRY AND BRUTEFORCE!!!!!!!!!!)
