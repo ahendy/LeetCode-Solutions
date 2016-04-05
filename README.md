@@ -12,7 +12,15 @@ Here's where I answer my (hopefully) daily Hackerrank, Leetcode, etc questions. 
 	
 There are a couple ways to solve this. I use the fact that the sum of n choose i for i to n is equal to 2^n. This means that I can express each subset as a binary string where 1 means it is a part of the subset. Because converting an int (here is is value from 0 to 2^n) with bin() gives a binary string in the form 0b00001, I must slice the 0b and reverse it (although on second thought it will probably work if not reversed). This can be achieved using Python's list slicing tools [start:stop:step] with step value = -1 and stop = 1. Next it is a matter of iterating the string and if the value is a 1, add it to the current subset. The rest is straight forward!
 
-###[226. Inver Binary Tree ---- (Easy)](https://leetcode.com/problems/invert-binary-tree/) 16:13 Monday, April 4 2016
+
+###[136. Single Number ----(Medium](https://leetcode.com/problems/single-number/) 14:00 Tuesday, April 5
+
+
+This problem looks like one I encountered in CSC225 with Bill Bird. It follows as: given a list integers 1 through n which has one missing, find the missing. Answer is linear time: expected sum = n(n-1)/2 from knowledge and then expected sum - real sum is answer. You follow the same principle with this problem, except, given is random integers not just 1..n. This means you have to use a hash table/bucketsort and keep track of what has been seen so far. I use a dictionary in order to keep constant time look up - opposed to appending to a list which exacerbates runtime. Each loop the dict is checked to see if the key exists, if it does then simply add to foundsum, otherwise set the dictionary for i to exist and add 2 times the "first occuring" digit to the expectedsum.
+
+step: find first occuring numbers, create 2*sum then subtract expected sum from foundsum.
+
+###[226. Invert Binary Tree ---- (Easy)](https://leetcode.com/problems/invert-binary-tree/) 16:13 Monday, April 4 2016
 
 Classic problem with a funny quote. Use top down tree recursion techniques to traverse. At each iteration of the "top" swap the left and right TreeNodes with classic swapping technique with a temp pointer. Try drawing out the steps on paper to visualize the recursion and swapping.
 
