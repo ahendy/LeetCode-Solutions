@@ -1,11 +1,26 @@
 # Coding_Challenges
-Here's where I answer my daily Leetcode question. Below I will write a quick explanation for each of my answers. This repo will track as a place to track my problem solving ability as well as work on my algorithmic communication
+Here's where I answer my daily Leetcode question. Below I will write a quick explanation for each of my answers. This repo will track as a place to track my problem solving ability as well as work on my algorithmic communication.
 
 
+###[2. Add Two Numbers ----(Medium)](https://leetcode.com/problems/add-two-numbers) 20:00 Sunday, April 10 2016
+
+Missed a few days (final exams, visiting home ), gotta catch up!
+
+This problem is a cool one. Initiall it seems like it could be super simple but you realize that the carry from your sum could keep carrying. Because of this I initally came up with something like this which is recursive. Here's psuedocode.
+		addtwo:
+			while true
+				if left pointer null
+					head.next = addtwo right
+				if right pointer null
+					head.next = addtwo left
+				val = l1 + l2 + carry
+				head.next = node(val)
 
 
+Here's how to compute the carry. First add the two numbers. Not sure if there is a faster way but this is what I made up. Divide by 10 to remove the ones place of your sum. Take the floor of this value. This will turn 7+8 = 15 to step 1: 15*0.1 = 1.5, step 2: floor(1.5) = 1 = carry. Now, the return value will be the the total sum aka (l1.val + l2.val + carry) - 10 * carry. 15-10 = 5 carry 1 -> [5, 1].
 
-
+Now the algorithm begins by saving a front pointer to the linked list. I initiallize it with a zero, not sure if that's the best strategy (otherwise java will complain). The while loop makes sense because it should only stop once the list1 has gone through, list2 is complete and carry is not 0. Observe the case where list1 and list2 is null but there is still a carry leftover. We cant use null + null + carry so it must be cast to a 0. I do this through an if-then-else assignmment.
+a = (condition? case true: case false). The rest is moving pointers forward if we need to.
 
 ###[78. Subsets ----(Medium)](https://leetcode.com/problems/subsets/) 20:00 Sunday, April 3 2016
 
