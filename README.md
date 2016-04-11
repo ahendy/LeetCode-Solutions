@@ -48,6 +48,12 @@ This one took me a lot longer than it should've.... Misread their definition of 
 Classic problem with a funny quote. Use top down tree recursion techniques to traverse. At each iteration of the "top" swap the left and right TreeNodes with classic swapping technique with a temp pointer. Try drawing out the steps on paper to visualize the recursion and swapping.
 
 
+###[237. Delete a Node in a Linked List ---- (Easy)](https://leetcode.com/problems/delete-node-in-a-linked-list/) 16:13 Sunday, April 10 2016
+
+This one is a test to know if you understand pointers in linked lists. Firstly, we can't just "remove" the specific node by saying node = null, as then we would lose the pointer to the next node. We also cant pick up that pointer because we have no reference to the previous pointer. With this in mind, we must instead make the specified's nodes value be equal to the next nodes value. Now, we can pick up the pointer by slapping on that node's next reference to the current node.next.
+[1]->[0]->[....] becomes [0*]->[0&]->[...] and rearranging pointers results in [0*] -> [...].
+
+
 ###[292. Nim Game ---- (Easy)](https://leetcode.com/problems/nim-game/) 21:00 Sunday, April 3 2016
 	
 
