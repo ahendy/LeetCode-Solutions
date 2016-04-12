@@ -1,6 +1,9 @@
 # Coding_Challenges
 Here's where I answer my daily Leetcode question. Below I will write a quick explanation for each of my answers. This repo will track as a place to track my problem solving ability as well as work on my algorithmic communication.
 
+###[1. Two Sum ----(Easy)](https://leetcode.com/problems/two-sum/) 19:00 Monday, April 11 2016
+
+Question uses hash maps, keeping track if the number that is required has been seen before. If it has, return the index pair. If it hasn't add it to the hash map. Straightforward enoough.
 
 ###[2. Add Two Numbers ----(Medium)](https://leetcode.com/problems/add-two-numbers) 20:00 Sunday, April 10 2016
 
@@ -26,6 +29,13 @@ a = (condition? case true: case false). The rest is moving pointers forward if w
 
 	
 There are a couple ways to solve this. I use the fact that the sum of n choose i for i to n is equal to 2^n. This means that I can express each subset as a binary string where 1 means it is a part of the subset. Because converting an int (here is is value from 0 to 2^n) with bin() gives a binary string in the form 0b00001, I must slice the 0b and reverse it (although on second thought it will probably work if not reversed). This can be achieved using Python's list slicing tools [start:stop:step] with step value = -1 and stop = 1. Next it is a matter of iterating the string and if the value is a 1, add it to the current subset. The rest is straight forward!
+
+###[104. Maximum Depth Tree ----(Easy)](https://leetcode.com/problems/maximum-depth-of-binary-tree/) 17:40 April 10
+
+Standard tree traversal question. In this case each interation, save the number which you are at. If this is greater than the previous greatest depth, reassign the values. I do this in a bottom up fashion (postorder) as visiting the children of a tree will be a better depth than the parents.
+
+
+
 
 
 ###[136. Single Number ----(Medium](https://leetcode.com/problems/single-number/) 14:00 Tuesday, April 5
