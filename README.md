@@ -23,7 +23,12 @@ This problem is a cool one. Initiall it seems like it could be super simple but 
 Here's how to compute the carry. First add the two numbers. Not sure if there is a faster way but this is what I made up. Divide by 10 to remove the ones place of your sum. Take the floor of this value. This will turn 7+8 = 15 to step 1: 15*0.1 = 1.5, step 2: floor(1.5) = 1 = carry. Now, the return value will be the the total sum aka (l1.val + l2.val + carry) - 10 * carry. 15-10 = 5 carry 1 -> [5, 1].
 
 Now the algorithm begins by saving a front pointer to the linked list. I initiallize it with a zero, not sure if that's the best strategy (otherwise java will complain). The while loop makes sense because it should only stop once the list1 has gone through, list2 is complete and carry is not 0. Observe the case where list1 and list2 is null but there is still a carry leftover. We cant use null + null + carry so it must be cast to a 0. I do this through an if-then-else assignmment.
-a = (condition? case true: case false). The rest is moving pointers forward if we need to.
+a = (condition? case true: case false). The rest is moving pointers forward if we need to.\
+
+###[9. Palindrome Number ----(Easy)](https://leetcode.com/problems/palindrome-number/)
+Just accepted a summer coop job, pretty happy!
+
+Easy question, I was tired. A thing is a palidnrome if its reverse is equal to itself. In python you could use str(digit)[::-1] to reverse it but I wanted to do it with math rather than strings. To do this you build a number r by taking the mod 10 of the first number n, resulting in leftmost digit, next iteration multiplying r by 10 and dividing n by 10. I recommend writing this out in paper to visualize it first.
 
 ###[78. Subsets ----(Medium)](https://leetcode.com/problems/subsets/) 20:00 Sunday, April 3 2016
 
