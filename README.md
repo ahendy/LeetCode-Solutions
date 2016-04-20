@@ -39,8 +39,9 @@ There are a couple ways to solve this. I use the fact that the sum of n choose i
 
 Standard tree traversal question. In this case each interation, save the number which you are at. If this is greater than the previous greatest depth, reassign the values. I do this in a bottom up fashion (postorder) as visiting the children of a tree will be a better depth than the parents.
 
+###[121. Best Timet to buy and sell stock ----(Easy)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-
+Getting frusterated with leetcode. Often their questions are very ambiguous and poorly defined such as this one. Nothing really to comment on it.
 
 
 ###[136. Single Number ----(Medium](https://leetcode.com/problems/single-number/) 14:00 Tuesday, April 5
