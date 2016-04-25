@@ -35,6 +35,14 @@ Easy question, I was tired. A thing is a palidnrome if its reverse is equal to i
 	
 There are a couple ways to solve this. I use the fact that the sum of n choose i for i to n is equal to 2^n. This means that I can express each subset as a binary string where 1 means it is a part of the subset. Because converting an int (here is is value from 0 to 2^n) with bin() gives a binary string in the form 0b00001, I must slice the 0b and reverse it (although on second thought it will probably work if not reversed). This can be achieved using Python's list slicing tools [start:stop:step] with step value = -1 and stop = 1. Next it is a matter of iterating the string and if the value is a 1, add it to the current subset. The rest is straight forward!
 
+###[96. Number BSTS----(Medium)](https://leetcode.com/problems/unique-binary-search-trees/)
+
+
+Refer to [catalan numbers](https://en.wikipedia.org/wiki/Catalan_number) 
+
+or use dynamic programming. The value of the current will equal the sum of the number of previous combinartions. KInda easy to visualize. G[i] = number all the way up the tree etc 
+
+
 ###[104. Maximum Depth Tree ----(Easy)](https://leetcode.com/problems/maximum-depth-of-binary-tree/) 17:40 April 10
 
 Standard tree traversal question. In this case each interation, save the number which you are at. If this is greater than the previous greatest depth, reassign the values. I do this in a bottom up fashion (postorder) as visiting the children of a tree will be a better depth than the parents.
