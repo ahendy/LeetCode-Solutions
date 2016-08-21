@@ -1,12 +1,17 @@
-    def subsets(coins, pos, set):
-        if pos == len(coins):
-            doSomeWithSubset(set)
-            return
-        
-        subsets(coins, pos+1, set)
-        subsets( coins, pos+1, set+[coins[pos]])
+
+def subsets(l, pos, sett, solution, size):
+	if len(sett) == size:
+		solution.append(sett)
+
+	if pos == len(l):
+		return
+
+	subsets(l, pos+1, sett, solution, size)
+	subsets(l, pos+1, sett + [l[pos]], solution, size)
 
 
-subsets(lists, 0, [])
 
-
+if __name__ == '__main__':
+	solution = []
+	subsets(range(5), 0, [], solution, 3)
+	print solution
